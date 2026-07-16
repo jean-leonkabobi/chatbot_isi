@@ -6,6 +6,7 @@ from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 from dotenv import load_dotenv
+from fastapi.staticfiles import StaticFiles
 
 load_dotenv()
 
@@ -20,6 +21,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Service des fichiers statiques (frontend)
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # ---------- 2. Connexion à la base et chargement du modèle ----------
 # Connexion PostgreSQL
