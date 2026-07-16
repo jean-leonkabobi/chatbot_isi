@@ -159,6 +159,9 @@ chatbot-isi/
 └── README.md                   # Ce fichier
 
 ## Contact
+
 **Auteur** : Jean-Leon KABOBI
+
 **Email** : kabobi.jeanleon.dev@gmail.com
+
 **Projet** : Chatbot ISI - Projet M1 GL
